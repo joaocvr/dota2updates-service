@@ -1,3 +1,3 @@
 package endpoint
 
-type API struct{}
+type Api struct{}

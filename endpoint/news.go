@@ -11,7 +11,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func (a *API) getNews(c *gin.Context) {
+func (a *Api) GetNews(c *gin.Context) {
 	count := "10"
 	if c.Query("count") != "" {
 		count = c.Query("count")
