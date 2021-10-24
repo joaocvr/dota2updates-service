@@ -1,4 +1,4 @@
-package main
+package endpoint
 
 import (
 	"dota2updates-service/commom"
@@ -11,17 +11,7 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func main() {
-	router := gin.Default()
-	router.GET("/news", getNews)
-
-	err := router.Run("localhost:8080")
-	if err != nil {
-		fmt.Print(err.Error())
-	}
-}
-
-func getNews(c *gin.Context) {
+func (a *API) getNews(c *gin.Context) {
 	count := "10"
 	if c.Query("count") != "" {
 		count = c.Query("count")
