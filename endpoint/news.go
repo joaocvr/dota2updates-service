@@ -39,6 +39,7 @@ func (a *Api) GetNews(c *gin.Context) {
 		return
 	}
 
-	log.Println("")
+	appNews.ConvertTaggedContent()
+
 	c.JSON(http.StatusOK, appNews)
 }
