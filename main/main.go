@@ -14,6 +14,7 @@ func main() {
 	router := gin.Default()
 	router.Use(CORSMiddleware())
 	router.GET("/v1/news", a.GetNews)
+	router.POST("/v1/user/signup", a.SignUp)
 
 	err := router.Run("localhost:8080")
 	if err != nil {
